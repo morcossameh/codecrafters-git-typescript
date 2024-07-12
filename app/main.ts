@@ -29,6 +29,7 @@ switch (command) {
         const nullByteIndex = decompressedBuffer.indexOf(0);
         const blobContent = decompressedBuffer.subarray(nullByteIndex + 1).toString();
         process.stdout.write(blobContent);
+        break;
     default:
         throw new Error(`Unknown command ${command}`);
 }
